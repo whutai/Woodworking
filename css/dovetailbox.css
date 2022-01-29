@@ -14,7 +14,6 @@
   --font-semi-bold: 600;
   /*========== Color ==========*/
   --main-color: #f0d290;
-  --body-color: #1a1a1a;
 }
 
 /* BASE */
@@ -153,10 +152,12 @@ header {
   background-color: var(--main-color);
   border-radius: 0.25rem;
 }
+
 /*Remove Youtube Embed Class */
 .html5-video-player a {
   display: none !important;
 }
+
 @media only screen and (min-width: 769px) {
   .nav__menu {
     width: 30%;

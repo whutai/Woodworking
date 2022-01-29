@@ -15,6 +15,9 @@
 
   /*========== Color ==========*/
   --main-color: #f0d290;
+  --body-color: #1a1a1a;
+  --white-color: rgb(241, 233, 233);
+  --red-color: #e53838;
 }
 
 /* BASE */
@@ -56,7 +59,8 @@ input {
 
 .container {
   max-width: 968px;
-  margin: 0 var(--m-1);
+  margin: 0 auto;
+  padding: 0 var(--m-1);
 }
 
 /* HEADER */
@@ -77,7 +81,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--m-0-5) 0;
+  padding: var(--m-0-5) var(--m-1);
   font-weight: var(--font-semi-bold);
 }
 
@@ -118,6 +122,19 @@ header {
   margin-top: 6rem;
   display: grid;
   row-gap: 1rem;
+  margin-bottom: 6rem;
+}
+
+.content__info {
+  text-align: center;
+}
+.content__info h3 {
+  padding-bottom: var(--m-0-5);
+}
+.content__info p {
+  font-size: 14px;
+  font-style: italic;
+  text-align: match-parent;
 }
 
 .content__project {
@@ -125,6 +142,11 @@ header {
   column-gap: 1rem;
 }
 .project__item {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.project__item:nth-child(2) {
   position: relative;
   transition: transform 0.3s;
 }
@@ -140,29 +162,37 @@ header {
 }
 
 .project__item:first-child:before {
-  content: "How To Make A Cabinet";
+  content: "How To Make A Cabinet!";
   position: absolute;
+  text-align: center;
   background-color: white;
   opacity: 0.7;
   font-size: 14px;
   font-weight: bold;
   color: black;
   padding: 1px 5px;
-  bottom: 5px;
+  bottom: 3px;
   left: 0;
   right: 0;
 }
 
 .project__item:nth-child(2):before {
-  content: "Update";
+  content: "How To Make a Dovetail Box!";
   position: absolute;
+  text-align: center;
   background-color: white;
   opacity: 0.7;
   font-size: 14px;
   font-weight: bold;
   color: black;
   padding: 1px 5px;
-  bottom: 5px;
+  bottom: 3px;
   left: 0;
   right: 0;
+}
+
+@media only screen and (min-width: 769px) {
+  .nav__menu {
+    width: 30%;
+  }
 }
