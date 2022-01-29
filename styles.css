@@ -1,0 +1,168 @@
+:root {
+  /* Magrin */
+  --m-0-25: 0.25rem;
+  --m-0-5: 0.5rem;
+  --m-0-75: 0.75rem;
+  --m-1: 1rem;
+  --mb-1-25: 1.25rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Color ==========*/
+  --main-color: #f0d290;
+}
+
+/* BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+/* REUSABLE CSS CLASS */
+
+.container {
+  max-width: 968px;
+  margin: 0 var(--m-1);
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background-color: var(--main-color);
+}
+.grid {
+  display: grid;
+}
+
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--m-0-5) 0;
+  font-weight: var(--font-semi-bold);
+}
+
+.nav__menu {
+  display: flex;
+  position: fixed;
+  background-color: var(--main-color);
+  padding-top: var(--m-0-5);
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  transition: 0.3s;
+}
+
+.menu__list {
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.show__menu {
+  right: 0;
+}
+
+.nav__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+
+.menu__item {
+  padding: var(--m-0-5) 0;
+  padding-left: var(--mb-1-25);
+}
+/* CONTENT */
+.content {
+  margin-top: 6rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.content__project {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+.project__item {
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.project__item img {
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.project__item:hover {
+  object-fit: contain;
+  transform: scale(1.05);
+}
+
+.project__item:first-child:before {
+  content: "How To Make A Cabinet";
+  position: absolute;
+  background-color: white;
+  opacity: 0.7;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 1px 5px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
+
+.project__item:nth-child(2):before {
+  content: "Update";
+  position: absolute;
+  background-color: white;
+  opacity: 0.7;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 1px 5px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
