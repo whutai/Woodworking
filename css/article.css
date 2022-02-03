@@ -28,7 +28,9 @@ html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
-
+body {
+  background-color: #f9f9f9;
+}
 ul {
   list-style: none;
 }
@@ -135,10 +137,14 @@ h1 {
 
 .content p {
   padding: 0.5rem 0;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .content a {
   font-weight: 500;
+  border: 1px solid;
+  padding: 0 0.5rem;
 }
 
 .free__course {
